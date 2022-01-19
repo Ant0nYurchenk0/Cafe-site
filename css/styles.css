@@ -131,6 +131,7 @@
   margin: 10px 10px;
   transition: .6s ease;
   border-radius: 7px;  
+  text-align: left;
 }
 .card p{
   white-space:normal;
