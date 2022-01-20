@@ -54,6 +54,7 @@
   padding: 0px;
   background-color: white;
   align-items: center;
+  background-color: #ddd;
 }
 .menu-overlap .navbar-nav{
   align-items: center;
@@ -115,16 +116,14 @@
   padding: 16px;
   text-decoration: none;
 }
-/* .carousel{
-  height: 500px;
-  background-color: #ddd;
-}
-.carousel a span{
-  color: #0f7480;
-} */
 .row{
   margin: 0px;
   padding: auto;
+}
+.scrollcard-row{
+  background-color: #ddd;
+  text-align: center;
+
 }
 .card {
   border: 2px solid #64ad00;
@@ -157,11 +156,9 @@
    padding: 10px;
 }
 .scrollcards {
-  background-color: #ddd;
   overflow: auto;
   white-space: nowrap;
   padding: 20px 12px;
-  text-align: center;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -175,21 +172,81 @@ div.scrollcards .card {
     height: auto; 
     width: 18rem;
 }
+.more-btn{
+  width: auto;
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #0f7480;
+  font-size: 1.5em;
+  padding-top: 0;
+  margin: auto;
+}
+.more-btn:hover{
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #64ad00;
+}
+.facts-gallery{
+  background-color: #0f7480;
+}
+.facts-gallery .row{
+  padding: 0;
+}
+.facts-gallery img{
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  opacity: 0.5;
+}
+.col-xl-12, .col-xl-6, .col-xl-3{
+  padding: 0px;
+  position: relative;
+  text-align: center;
+}
+.fact{
+  text-transform: capitalize;
+  font-size: 2.5em;
+}
+.credit{
+  text-transform: uppercase;
+}
+.text-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.title{
+  text-align: center;
+  padding: 40px 15%;
+  background-color: #ddd;
+}
+.title h2{
+  font-size: 4em;
+  text-transform: capitalize;
+}
+.title p{
+  color: #0f7480;
+  font-size: 1.2em;
+}
+.title hr{
+  color: #0f7480;
+  height: 3px;
+}
+
 /*FOOTER*/
 .panel-footer{
   background-color: white;
 }
-.panel-footer section{
+.panel-footer{
   text-align: center;
-  margin-bottom: 20px;
-}
-.panel-footer .text-center{
-  padding-bottom: 20px;
-}
-.panel-footer hr{
-  width: 50%;
+  margin-bottom: 30px;
 }
 .visible-xs{
+  display: none;
+}
+.visible-sm{
   display: none;
 }
 @media all and (max-width: 992px){
@@ -215,6 +272,15 @@ div.scrollcards .card {
   .bar{
     display: none;
   }
+  .text-block {
+    font-size: 0.7em;
+  }
+}
+@media all and (max-width: 768px){
+  
+  .visible-sm{
+    display: block;
+  }
 }
 @media all and (max-width: 479px){
   .hidden-md{
@@ -232,15 +298,6 @@ div.scrollcards .card {
   .menu-overlap .navbar-nav li{
     margin-top: 10px;
     font-size: 1em;
-  }
-  .panel-footer section{
-    margin-bottom: 20px;
-    font-size: 0.7em;
-    margin-bottom: 10px;
-  }
-  .panel-footer .text-center{
-    font-size: 0.7em;
-    padding-bottom: 10px;
   }
   .visible-xs{
     display: block;
