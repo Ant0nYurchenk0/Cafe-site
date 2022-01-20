@@ -1,3 +1,6 @@
+body {
+  font-family: 'EB Garamond', serif;
+}
 /*HEADER*/
 .navbar{
   width: 100%;
@@ -39,6 +42,7 @@
 .menu{
   font-weight: bold;
   color: #64ad00;
+  font-family: 'Poppins', sans-serif;;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -87,6 +91,7 @@
   object-fit: cover;
 }
 .sub-menu {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   list-style-type: none;
   margin: 0px auto;
@@ -123,19 +128,35 @@
 .scrollcard-row{
   background-color: #ddd;
   text-align: center;
-
+  
 }
 .card {
+  white-space:normal;
   border: 2px solid #64ad00;
   margin: 10px 10px;
   transition: .6s ease;
   border-radius: 7px;  
   text-align: left;
+  font-size: 1.2rem;
+  padding: 0;
+  height: 400px;
+}
+.card h5{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  height: auto;
+}
+.card .date {
+  font-size: 0.8rem;
+  color: gray;
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
+  text-transform: capitalize;
 }
 .card p{
-  white-space:normal;
-  height: 100px;
   overflow: scroll;
+  max-height: 100px;
 }
 .card .btn{
   background-color: #0f7480;
@@ -147,7 +168,9 @@
 }
 .card img{
   max-height: 100px;
+  max-width: 100%;
   object-fit: cover;
+  position: relative
 }
 .card:hover {
   transform: scale(1.05);
@@ -169,7 +192,7 @@ div.scrollcards .card {
     display: inline-block;
     padding: 14px;
     text-decoration: none;
-    height: auto; 
+    height: 350px; 
     width: 18rem;
 }
 .more-btn{
@@ -198,7 +221,7 @@ div.scrollcards .card {
   height: 300px;
   opacity: 0.5;
 }
-.col-xl-12, .col-xl-6, .col-xl-3{
+.col-xl-12, .col-xl-6, .col-xl-3, .col-md-12, .col-md-6, .col-md-4{
   padding: 0px;
   position: relative;
   text-align: center;
@@ -234,14 +257,37 @@ div.scrollcards .card {
   color: #0f7480;
   height: 3px;
 }
+.img-title{
+  background-color: rgb(0,0,0,0.5);
+  padding: 30px;
+  color: white;
+  line-height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  text-align:  left;
+}
+.read-item{
+  overflow: hidden;
+}
+#read img{
+  transition: 0.3s ease;
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+#read img:hover{
+  transform: scale(1.05);
+}
 
 /*FOOTER*/
+
 .panel-footer{
   background-color: white;
-}
-.panel-footer{
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
+  font-family: 'Poppins', sans-serif;
 }
 .visible-xs{
   display: none;
