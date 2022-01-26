@@ -22,10 +22,11 @@ body {
   text-transform: capitalize;
   text-shadow: 1px 1px 1px #0f7480;
 }
-.navbar .btn-light{
+.navbar .btn-outline-light{
   background-color: rgba(0,0,0,0);
   border:0px;
   color: rgba(0,0,0,0);
+  border-color: #fff;
 }
 .navbar .nav-link{
   margin-right: 50px;
@@ -46,6 +47,14 @@ body {
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.collapse-menu-btn.active.focus, .collapse-menu-btn.active:focus, .collapse-menu-btn.focus, .collapse-menu-btn.focus:active, .collapse-menu-btn:active:focus, .collapse-menu-btn:focus {
+  outline: thin dotted;
+  outline-offset: -2px;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 /*Collapsable Menu*/
 .collapse.in:not(.show) {
@@ -131,49 +140,51 @@ body {
   
 }
 .card {
+  border: 7px solid #ddd;
   white-space:normal;
-  border: 2px solid #64ad00;
   margin: 10px 10px;
-  transition: .6s ease;
   border-radius: 7px;  
   text-align: left;
   font-size: 1.2rem;
   padding: 0;
   height: 400px;
 }
-.card h5{
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-  height: auto;
-}
 .card .date {
   font-size: 0.8rem;
-  color: gray;
+  color: #ddd;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  margin: auto;
   text-transform: capitalize;
+  max-height: 20px;
 }
 .card p{
   overflow: scroll;
-  max-height: 100px;
+  line-height: 20px;
+  max-height: 50px;
 }
 .card .btn{
   background-color: #0f7480;
   border-color: #0f7480;
   color: white;
 }
-.card .btn:hover{
-  color: #64ad00;
+.card:hover{
+  border-color: #64ad00; 
+  transition: .3s ease;
+}
+.card:not(:hover){
+  border-color: #ddd; 
+  transition: .3s ease;
 }
 .card img{
-  max-height: 100px;
+  height: 100%;
   max-width: 100%;
   object-fit: cover;
-  position: relative
+  position: relative;
 }
-.card:hover {
-  transform: scale(1.05);
+.card .img-title{
+  padding: 10px;
+  bottom: 0px;
+  position: absolute;
 }
 .card-body {
    padding: 10px;
@@ -190,10 +201,12 @@ body {
 }
 div.scrollcards .card {
     display: inline-block;
-    padding: 14px;
+    border-radius: 0;
+    padding: 0px;
     text-decoration: none;
     height: 350px; 
     width: 18rem;
+    position: relative;
 }
 .more-btn{
   width: auto;
@@ -258,7 +271,7 @@ div.scrollcards .card {
   height: 3px;
 }
 .img-title{
-  background-color: rgb(0,0,0,0.5);
+  background-color: rgb(15, 116, 128, 0.5);
   padding: 30px;
   color: white;
   line-height: 100px;
@@ -336,7 +349,7 @@ div.scrollcards .card {
     width: 50px;
   }
   .navbar-light .navbar-brand,.navbar-light .navbar-brand:hover,.navbar-light .navbar-brand:focus {
-    font-size: 1em ;
+    font-size: 1.5em ;
   }
   .navbar > .container-fluid{
     padding: 0px 10px 0px;  
@@ -348,19 +361,14 @@ div.scrollcards .card {
   .visible-xs{
     display: block;
   }
-  .card p{
-    white-space:normal;
-    height: 80px;
+  .card{
+    font: 0.8em;
   }
   div.scrollcards .card{
     width: 15rem;
-    padding: 10px;
   }
   .sub-menu-item a{
     padding: 10px;
   }
-  .card img{
-    max-height: 80px;
-    object-fit: cover;
-  }
+
 }
